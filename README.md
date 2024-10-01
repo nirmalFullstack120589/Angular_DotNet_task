@@ -11,9 +11,10 @@ Database Type: MongoDB Community Server
 Database Name: ProductDb
 
 Database Version: 8.0.0
+
 ------------------------------------------------------------------------------------------
 
-**FrontEnd** 
+## FrontEnd 
 Angular Version 18.2.0
 
 This is an **Angular 18** application that uses **NgRx** for state management to add products and display a list of products. The application is configured to interact with a backend API, and the base URL can be modified as needed.
