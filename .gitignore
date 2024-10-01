@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Task2/BinaryString/BinaryString/obj
+/Task2/BinaryString/BinaryString/bin/Debug/net8.0
+/Task2/BinaryString/.vs/BinaryString
+/.vs

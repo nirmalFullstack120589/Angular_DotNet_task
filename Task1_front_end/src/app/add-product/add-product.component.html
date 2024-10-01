@@ -1,0 +1,71 @@
+<h2 mat-dialog-title>Add Product</h2>
+<mat-dialog-content>
+    <form [formGroup]="productForm">
+        <div>
+            <label>Name:</label>
+            <input formControlName="name" />
+            @if (productForm.get('name')?.invalid && (productForm.get('name')?.dirty || productForm.get('name')?.touched)) {
+            <div>
+                @if (productForm.get('name')?.errors?.['required']) {
+                <small>Name is required.</small>
+                }
+                @if (productForm.get('name')?.errors?.['minlength']) {
+                <small>
+                    Name must be at least 2 characters long.
+                </small>
+                }
+            </div>
+            }
+        </div>
+        <div>
+            <label>Description:</label>
+            <textarea formControlName="description"></textarea>
+            @if (productForm.get('description')?.invalid && productForm.get('description')?.touched) {
+            <div>
+                @if (productForm.get('description')?.errors?.['required']) {
+                <small>Description is required.</small>
+                }
+                @if (productForm.get('description')?.errors?.['minlength']) {
+                <small>
+                    Name must be at least 30 characters long.
+                </small>
+                }
+            </div>
+            }
+        </div>
+        <div>
+            <label>Price:</label>
+            <input formControlName="price" type="number" />
+            @if (productForm.get('price')?.invalid && productForm.get('price')?.touched) {
+            <div>
+                @if (productForm.get('price')?.errors?.['required']) {
+                <small>Price is required.</small>
+                }
+                @if (productForm.get('price')?.errors?.['min']) {
+                <small>
+                    Price should not less than 1.
+                </small>
+                }
+            </div>
+            }
+        </div>
+        <div class="consent-checkbox">
+            <label>
+                <input type="checkbox" formControlName="consent" />
+                I consent to the processing of my personal data.
+                <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer">
+                    Terms and Conditions
+                </a>
+            </label>
+            @if (productForm.get('consent')?.invalid && productForm.get('consent')?.touched) {
+            <div>
+                <small>You must give consent to proceed.</small>
+            </div>
+            }
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close mat-raised-button>Cancel</button>
+    <button mat-button mat-flat-button (click)="onSubmit()">Add Product</button>
+</mat-dialog-actions> 
