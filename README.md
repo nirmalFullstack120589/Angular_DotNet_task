@@ -1,3 +1,5 @@
+# Product Management Application
+
 **Web API Project** 
 This project is a Web API developed using .NET 8.0 and Visual Studio 2022 Community Edition.
 
@@ -10,10 +12,9 @@ Database Name: ProductDb
 
 Database Version: 8.0.0
 ------------------------------------------------------------------------------------------
-**ForntEnd** 
-Angular Version 18.2.0
 
-# Product Management Application
+**FrontEnd** 
+Angular Version 18.2.0
 
 This is an **Angular 18** application that uses **NgRx** for state management to add products and display a list of products. The application is configured to interact with a backend API, and the base URL can be modified as needed.
 
@@ -34,13 +35,6 @@ This is an **Angular 18** application that uses **NgRx** for state management to
   ```
 
 ## Getting Started
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/product-management-app.git
-cd product-management-app
-```
 
 ### Install Dependencies
 
